@@ -1,6 +1,6 @@
 // Max Base
 // Monte-Carlo Calculation of Pi
-// All rights and credits of the code reserved to their original creator and this repository:
+// I'll take this code down, if the original creator contacts me. All rights and credits of the code reserved to their original creator and this repository:
 // GitHub.com/BaseMax/pi
 // A better and alternative way to create random number: https://github.com/BaseMax/SecureRandStringC
 #include <stdlib.h>
