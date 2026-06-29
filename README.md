@@ -16,7 +16,7 @@ Many of you that analyzed the **code** and searched like me, are thinking "This 
 If you still don't know what's this, it's a **book library-like repository** that shows you **scripts** to calculate the **Pi**, and gives you the **freedom** to **download** and **test** it, **suggest changes** and **redistribute** with your changes.
 
 ### Actual Copyright ©
-**Pi.c** is from the ownership of the **Base Max️**, and it's repository is **GitHub/BaseMax/pi**. All rights reserved, based on **GNU GPL-3.0 License**.
+**Pi.c** is from the ownership of the **Base Max️**, and it's repository is **[GitHub/BaseMax/pi](https://github.com/BaseMax/pi)**. All rights reserved, based on **GNU GPL-3.0 License**.
 **Windows** is a trademark from **Microsoft Corporation**. 
 
 ----------------------------------------------
