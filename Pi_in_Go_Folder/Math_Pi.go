@@ -6,7 +6,9 @@ import (
 )
 
 func main() {
-	// math.Pi holds the standard float64 constant
-	fmt.Printf("Pi is approximately: %.16f\n", math.Pi)
+	// Prints Pi with standard formatting
+	fmt.Println("Standard Pi:", math.Pi) 
+	
+	// Prints Pi with high decimal precision
+	fmt.Printf("High Precision Pi: %.48f\n", math.Pi) 
 }
-
