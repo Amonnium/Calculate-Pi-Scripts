@@ -14,6 +14,7 @@ If you don't want to spend money, get to know that when you download, you are al
 ## Copyright and Ownership of the files
 Many of you that analyzed the **code** and searched like me, are thinking "This guy is only **stealing** the **code** from **other programmers!**", and I want to say that **I CONDEMN STEALING**, and when I can, **I give the credits** to the **original creators** and give the **guarantee** of **taking down the specific files** from here, if any of the developers that created the code (like **Base Max** in **Pi.c** file) contacts me. Not all the project is taken down, but the specific files that are **"copyrighted"**.
 If you still don't know what's this, it's a **book library-like repository** that shows you **scripts** to calculate the **Pi**, and gives you the **freedom** to **download** and **test** it, **suggest changes** and **redistribute** with your changes.
+**You can do** the things **you want**, but according to the **MIT License**.
 
 ### Actual Copyright ©
 **Pi.c** is from the ownership of the **Base Max️**, and it's repository is **[GitHub/BaseMax/pi](https://github.com/BaseMax/pi)**. All rights reserved, based on **GNU GPL-3.0 License**.
