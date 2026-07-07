@@ -1,4 +1,8 @@
-The commands to install the software needed by all of the languages present.
+# Dependencies
+This README will explain how to install the dependencies needed by all of the languages on the repo.
+
+## Manual Installation
+The commands to install the software needed by all of the languages.
 
 Update the packages:
 ```
