@@ -8,7 +8,7 @@ set -e
 
 clear
 
-echo "Install Dependencies by Calculate Pi Scripts"
+echo "Dependencies Installer by Calculate Pi Scripts"
 sleep 1
 echo "Hosted on GitHub since 2026"
 echo "Made with dedication and love by Amonnium."
