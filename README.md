@@ -1,4 +1,4 @@
-![Calculate Pi Scripts Logo](Calculate-Pi-Scripts/Assets/Calculate-Pi-Scripts-Logo.png)
+![Calculate Pi Scripts Logo](Assets/Calculate-Pi-Scripts-Logo.png)
 # Calculate Pi Scripts
 Are you a **junior programmer** (or **senior**), a **data scientist**, or **something else**, that want to **test code** that isn't "Hello, World!", but want to **test** with **math** and **calculate** the famous constant **π (Pi)**? 
 So, you are in the right place! Welcome to the **Calculate Pi Scripts!**
