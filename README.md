@@ -5,7 +5,7 @@ The **Calculate Pi Scripts** is a **GitHub repository** that holds many **code f
 
 ## How to download?
 Go to the **Releases**, and download the files you want, based on your OS, because the **.EXEs** only work on **Windows™**, and the **not ending in .exe executables** on **Unix-like** systems. **Please follow the instructions showed in the Releases and on Dependencies directory's README, for not get doubts and problems with dependencies and such things.**
-Also, if you want to **install** the dependencies on a **intelligent way** and you use a **Debian-based system**, please use the **install.sh** script present in **Dependencies directory** using this **command**:
+Also, if you want to **install** the dependencies on a **intelligent way** and you use a **Debian-based system**, you can use the **install.sh** script present in **Dependencies directory** using this **command**:
 ```
 bash <(curl -fsSL https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/Dependencies/install.sh)
 ```
