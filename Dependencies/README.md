@@ -65,6 +65,6 @@ sudo snap install zig --classic --edge
 ## Using Dependencies Installer
 If you don't want to copy-paste the commands every time, you can use the Dependencies Installer by using this command:
 ```
-curl -sL https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/readme.md/DependenciesInstaller.sh | bash
+curl -sL https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/main/install.sh | bash
 ```
 Note: This method, at the moment I'm writing this, **only works** on **Debian-based systems**, like **Debian**, **Ubuntu**, **Linux Mint**, **Zorin OS**, and many others. 
