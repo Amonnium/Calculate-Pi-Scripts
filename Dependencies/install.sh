@@ -207,6 +207,6 @@ sleep 1
 echo "You may need to restart your terminal before using some of the newly installed languages."
 echo
 sleep 1
-echo "Thank you for using this utility."
+echo "Thank you for using this utility!"
 echo "- Amonnium"
 echo "----------------------------------------"
