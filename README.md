@@ -10,7 +10,7 @@ To install **everything** (only working on **Bash**) with an **all-in-one soluti
 bash <(curl -fsSL https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/install.sh)
 ```
 To install separated files, go to the **Releases**, and download the files you want, based on your OS, because the **.EXEs** only work on **Windows™**, and the ones **without .exe extension** on **Unix-like** systems. **Please follow the instructions showed in the Releases and on Dependencies directory's README, for not get doubts and problems with dependencies and such things.**
-Also, if you want to **install** the dependencies on a **intelligent way** and you use a **Debian-based system**, you can use the **install.sh** script present in **Dependencies directory** using this **command**:
+Also, if you want to **install** the dependencies on a **intelligent way** and you use a **Debian-based system**, you can use the **install.sh** script (included in the main installer, by the way) present in **Dependencies directory** using this **command**:
 ```
 bash <(curl -fsSL https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/Dependencies/install.sh)
 ```
@@ -27,7 +27,7 @@ If you still don't know what's this, it's a **book library-like repository** tha
 **You can do** the things **you want**, but under the terms of the **MIT License**.
 
 ### Actual Copyright ©
-**Pi.c** is from the ownership of the **Base Max️**, and it's repository is **[GitHub/BaseMax/pi](https://github.com/BaseMax/pi)**. All rights reserved, based on **GNU GPL-3.0 License**.
+**Pi.c** is from the ownership of the **Base Max**, and it's repository is **[GitHub/BaseMax/pi](https://github.com/BaseMax/pi)**. All rights reserved, based on **GNU GPL-3.0 License**.
 **Windows** is a trademark from **Microsoft Corporation**. 
 
 ----------------------------------------------
