@@ -2,7 +2,7 @@
 This README will explain how to install the **dependencies** needed by **all** of the **languages** on the **repo**.
 
 ## Manual Installation
-**The commands** to **install the software** needed by **all** of the **languages** are: 
+**The commands** to **install the software** needed by **all** of the **languages** are:
 
 Update the packages:
 ```
@@ -61,10 +61,14 @@ Zig:
 ```
 sudo snap install zig --classic --edge
 ```
-
+Raku:
+```
+curl https://rakubrew.org/install-on-macos.sh | sh
+rakubrew init
+```
 ## Using Dependencies Installer
 If you don't want to copy-paste the commands every time, you can use the Dependencies Installer by using this command:
 ```
 bash <(curl -fsSL https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/Dependencies/install.sh)
 ```
-Note: This method, at the moment I'm writing this, **only works** on **Debian-based systems**, like **Debian**, **Ubuntu**, **Linux Mint**, **Zorin OS**, and many others. 
+Note: This method, at the moment I'm writing this, **only works** on **Debian-based systems**, like **Debian**, **Ubuntu**, **Linux Mint**, **Zorin OS**, and many others.
