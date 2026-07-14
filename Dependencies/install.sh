@@ -197,6 +197,21 @@ else
     sudo snap install zig --classic --edge
 fi
 
+# Raku installation
+echo
+echo "----------------------------------------"
+echo "Installing Raku..."
+echo "----------------------------------------"
+sleep 0.5
+
+if command -v raku >/dev/null 2>&1; then
+    echo "Raku is already installed."
+else
+    curl https://rakubrew.org/install-on-macos.sh | sh
+    
+    rakubrew init
+fi
+
 sleep 2
 
 echo
