@@ -207,13 +207,7 @@ sleep 0.5
 if command -v raku >/dev/null 2>&1; then
     echo "Raku is already installed."
 else
-    curl https://rakubrew.org/install-on-perl.sh | sh
-
-    eval "$(~/.rakubrew/bin/rakubrew init Bash)"
-
-    rakubrew download
-    
-    rakubrew switch moar-2026.06  # Use the version downloaded
+    sudo apt install -y rakudo
 fi
 
 sleep 2
