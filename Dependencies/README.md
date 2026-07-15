@@ -63,8 +63,7 @@ sudo snap install zig --classic --edge
 ```
 Raku:
 ```
-curl https://rakubrew.org/install-on-macos.sh | sh
-rakubrew init
+sudo apt install -y rakudo
 ```
 ## Using Dependencies Installer
 If you don't want to copy-paste the commands every time, you can use the Dependencies Installer by using this command:
