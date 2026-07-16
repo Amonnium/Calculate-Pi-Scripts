@@ -194,7 +194,7 @@ sleep 0.5
 if command -v zig >/dev/null 2>&1; then
     echo "Zig is already installed."
 else
-    sudo apt install zig
+    sudo apt install -y zig
 fi
 
 # Raku installation
