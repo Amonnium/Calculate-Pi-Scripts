@@ -14,7 +14,30 @@ Also, if you want to **install** the dependencies on a **intelligent way** and y
 ```
 bash <(curl -fsSL https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/Dependencies/install.sh)
 ```
-If you only want a **list of commands** to **download** them **independently** (also, only on a **Debian-based system**), there are on the **README** at the **same directory**. 
+If you only want a **list of commands** to **download** them **independently** (also, only on a **Debian-based system**), there are on the **README** at the **same directory**.
+
+## How to build?
+To build the repo, the best way is cloning with Git, and removing files that will not work on your system.
+
+- For Unix-like systems (Linux):
+```
+git clone https://github.com/Amonnium/Calculate-Pi-Scripts.git
+cd Calculate-Pi-Scripts
+rm -r Pi_in_PowerShell
+rm Pi.bat
+rm Pi_in_C++_Folder/Pi_in_C++.exe Pi_in_C_Folder/Pi_in_C.exe Pi_in_Go_Folder/Pi_in_Go.exe Pi_in_Go_Folder/Math_Pi_in_Go.exe
+```
+
+- For Windows:
+```
+git clone https://github.com/Amonnium/Calculate-Pi-Scripts.git
+cd Calculate-Pi-Scripts
+del install.SH
+del Dependencies/install.sh
+del Pi.sh
+del Pi_in_C++_Folder/Pi_in_C++. Pi_in_C_Folder/Pi_in_C Pi_in_Go_Folder/Pi_in_Go Pi_in_Go_Folder/Math_Pi_in_Go
+```
+
 ## How to contribute?
 You can **contribute** to the **repository**, **issuing ideas**, like a **new language** and it's **best methods** and **the code**, or for **change a file**, or **delete it**.
 Also, you can **contribute** with **redistributing** and **forking** the **repository**.
@@ -27,7 +50,7 @@ If you still don't know what's this, it's a **book library-like repository** tha
 **You can do** the things **you want**, but under the terms of the **MIT License**.
 
 ### Actual Copyright ©
-**Windows** is a trademark from **Microsoft Corporation**. 
+**Windows** is a trademark from **Microso- ft Corporation**. 
 
 ----------------------------------------------
 Thank you for visiting this repository.
