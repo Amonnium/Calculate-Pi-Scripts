@@ -32,7 +32,7 @@ rm Pi_in_C++_Folder/Pi_in_C++.exe Pi_in_C_Folder/Pi_in_C.exe Pi_in_Go_Folder/Pi_
 ```
 git clone https://github.com/Amonnium/Calculate-Pi-Scripts.git
 cd Calculate-Pi-Scripts
-del install.SH
+del install.sh
 del Dependencies/install.sh
 del Pi.sh
 del Pi_in_C++_Folder/Pi_in_C++. Pi_in_C_Folder/Pi_in_C Pi_in_Go_Folder/Pi_in_Go Pi_in_Go_Folder/Math_Pi_in_Go
