@@ -35,6 +35,7 @@ echo "Running the Dependencies Installer."
 echo "----------------------------------------"
 sleep 0.5
 
+chmod +x install.sh
 ./install.sh
 sleep 0.2
 cd ..
