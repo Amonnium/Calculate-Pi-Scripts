@@ -50,12 +50,7 @@ If you still don't know what's this, it's a **book library-like repository** tha
 **You can do** the things **you want**, but under the terms of the **MIT License**.
 
 ### Actual Copyright ©
-<<<<<<< HEAD
-**Pi.c** is from the ownership of the **Base Max**, and it's repository is **[GitHub/BaseMax/pi](https://github.com/BaseMax/pi)**. All rights reserved, based on **GNU GPL-3.0 License**.
 **Windows** is a trademark from **Microsoft Corporation**. 
-=======
-**Windows** is a trademark from **Microso- ft Corporation**. 
->>>>>>> 67ad5478f6b1f71216f55cd57c1022a044b2f52d
 
 ----------------------------------------------
 Thank you for visiting this repository.
