@@ -8,6 +8,10 @@ Update the packages:
 ```
 sudo apt update && sudo apt upgrade -y
 ```
+Git:
+```
+sudo apt install -y git
+```
 Python:
 ```
 sudo apt install -y python3 python-is-python3 python3-pip
