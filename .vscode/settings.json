@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 {
     "files.readonlyInclude": {
         "{**/.c4z/.extsrcs/*.PROTSYM.cbl,**/.c4z/.extsrcs/*.PROTSYM.listing}": true
     }
 }
+=======
+{
+    "files.readonlyInclude": {
+        "{**/.c4z/.extsrcs/*.PROTSYM.cbl,**/.c4z/.extsrcs/*.PROTSYM.listing}": true
+    }
+}
+>>>>>>> 67ad5478f6b1f71216f55cd57c1022a044b2f52d

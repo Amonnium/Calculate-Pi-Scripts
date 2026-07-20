@@ -14,7 +14,30 @@ Also, if you want to **install** the dependencies on a **intelligent way** and y
 ```
 bash <(curl -fsSL https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/Dependencies/install.sh)
 ```
-If you only want a **list of commands** to **download** them **independently** (also, only on a **Debian-based system**), there are on the **README** at the **same directory**. 
+If you only want a **list of commands** to **download** them **independently** (also, only on a **Debian-based system**), there are on the **README** at the **same directory**.
+
+## How to build?
+To build the repo, the best way is cloning with Git, and removing files that will not work on your system.
+
+- For Unix-like systems (Linux):
+```
+git clone https://github.com/Amonnium/Calculate-Pi-Scripts.git
+cd Calculate-Pi-Scripts
+rm -r Pi_in_PowerShell
+rm Pi.bat
+rm Pi_in_C++_Folder/Pi_in_C++.exe Pi_in_C_Folder/Pi_in_C.exe Pi_in_Go_Folder/Pi_in_Go.exe Pi_in_Go_Folder/Math_Pi_in_Go.exe
+```
+
+- For Windows:
+```
+git clone https://github.com/Amonnium/Calculate-Pi-Scripts.git
+cd Calculate-Pi-Scripts
+del install.sh
+del Dependencies/install.sh
+del Pi.sh
+del Pi_in_C++_Folder/Pi_in_C++. Pi_in_C_Folder/Pi_in_C Pi_in_Go_Folder/Pi_in_Go Pi_in_Go_Folder/Math_Pi_in_Go
+```
+
 ## How to contribute?
 You can **contribute** to the **repository**, **issuing ideas**, like a **new language** and it's **best methods** and **the code**, or for **change a file**, or **delete it**.
 Also, you can **contribute** with **redistributing** and **forking** the **repository**.
@@ -22,13 +45,17 @@ In the future, you'll have the possibility to **donate** and help with this **ho
 If you don't want to spend money, get to know that when you download, you are also **contributing**.
 
 ## Copyright and Ownership of the files
-Many of you that analyzed the **code** and searched like me, are thinking "This guy is only **stealing** the **code** from **other programmers!**", and I want to say that **I CONDEMN STEALING**, and when I can, **I give the credits** to the **original creators** and give the **guarantee** of **taking down the specific files** from here, if any of the developers that created the code (like **Base Max** in **Pi.c** file) contacts me. Not all the project is taken down, but the specific files that are **"copyrighted"**.
+Many of you that analyzed the **code** and searched like me, are thinking "This guy is only **stealing** the **code** from **other programmers!**", and I want to say that **I CONDEMN STEALING**, and when I can, **I give the credits** to the **original creators** and give the **guarantee** of **taking down the specific files** from here, if any of the developers that created the code, contacts me. Not all the project is taken down, but the specific files that are **"copyrighted"**.
 If you still don't know what's this, it's a **book library-like repository** that shows you **scripts** to calculate the **Pi**, and gives you the **freedom** to **download** and **test** it, **suggest changes** and **redistribute** with your changes.
 **You can do** the things **you want**, but under the terms of the **MIT License**.
 
 ### Actual Copyright ©
+<<<<<<< HEAD
 **Pi.c** is from the ownership of the **Base Max**, and it's repository is **[GitHub/BaseMax/pi](https://github.com/BaseMax/pi)**. All rights reserved, based on **GNU GPL-3.0 License**.
 **Windows** is a trademark from **Microsoft Corporation**. 
+=======
+**Windows** is a trademark from **Microso- ft Corporation**. 
+>>>>>>> 67ad5478f6b1f71216f55cd57c1022a044b2f52d
 
 ----------------------------------------------
 Thank you for visiting this repository.

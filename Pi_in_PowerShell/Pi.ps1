@@ -9,4 +9,4 @@ for ($i = 0; $i -lt $n.count - 1; $i += 2) {
     }
     $tick++
 }
-$pi   
+$pi

@@ -1,25 +1,20 @@
-// Max Base
-// Monte-Carlo Calculation of Pi
-// I'll take this code down, if the original creator contacts me. All rights and credits of the code reserved to their original creator and this repository:
-// GitHub.com/BaseMax/pi
-// A better and alternative way to create random number: https://github.com/BaseMax/SecureRandStringC
-#include <stdlib.h>
 #include <stdio.h>
 
-double pi(int loop) {
-	int count=0;
-	for(int i=0;i<loop;i++) {
-		double a=(double)rand()/RAND_MAX;
-		double b=(double)rand()/RAND_MAX;
-		if(1>=a*a+b*b)
-			count++;
-	}
-	return (double)count/loop*4;
+double calculate_pi(int iterations) {
+    double pi = 0.0;
+
+    for (int n = 0; n < iterations; n++) {
+        double sign = (n % 2 == 0) ? 1.0 : -1.0;
+        pi += sign / (2.0 * n + 1.0);
+    }
+
+    return 4.0 * pi;
 }
 
 int main() {
-	int loop=100000; // increase this value to get more digits of PI number
-	srand(10102020); // more secure rand...
-	printf("PI is %g\n", pi(loop));
-	return 0;
+    double result = calculate_pi(100000000);
+
+    printf("Pi approximation: %.15f\n", result);
+
+    return 0;
 }
