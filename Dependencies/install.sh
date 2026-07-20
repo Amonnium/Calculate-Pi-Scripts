@@ -32,6 +32,19 @@ sleep 0.5
 
 sudo apt update && sudo apt upgrade -y
 
+# Git installation
+echo
+echo "----------------------------------------"
+echo "Installing Git..."
+echo "----------------------------------------"
+sleep 0.5
+
+if command -v git >/dev/null 2>&1; then
+    echo "Git is already installed."
+else
+    sudo apt install -y git
+fi
+
 # Python installation
 echo
 echo "----------------------------------------"
