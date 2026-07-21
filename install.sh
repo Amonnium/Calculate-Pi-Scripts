@@ -53,14 +53,14 @@ rm README.md
 rm LICENSE
 rm Pi.bat
 rm -r Pi_in_PowerShell
-rm Dependencies/README.md/
-rm Pi_in_C++_Folder/Pi_in_C++.exe/
-rm Pi_in_C_Folder/Pi_in_C.exe/
-rm Pi_in_C_Folder/Pi_in_C_2.exe/
-rm Pi_in_Go_Folder/Math_Pi_in_Go.exe/
-rm Pi_in_Go_Folder/Pi_in_Go.exe/
-rm Pi_in_Rust_Folder/Pi_in_Rust.exe/
-rm Pi_in_Rust_Folder/Math_Pi_in_Rust.exe/
+rm Dependencies/README.md
+rm Pi_in_C++_Folder/Pi_in_C++.exe
+rm Pi_in_C_Folder/Pi_in_C.exe
+rm Pi_in_C_Folder/Pi_in_C_2.exe
+rm Pi_in_Go_Folder/Math_Pi_in_Go.exe
+rm Pi_in_Go_Folder/Pi_in_Go.exe
+rm Pi_in_Rust_Folder/Pi_in_Rust.exe
+rm Pi_in_Rust_Folder/Math_Pi_in_Rust.exe
 
 echo
 echo "----------------------------------------"
