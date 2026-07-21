@@ -138,4 +138,3 @@ If you don't want to copy/paste the commands every time, you can use the Depende
 ```
 bash <(curl -fsSL https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/Dependencies/install.sh)
 ```
-Note: This installer currently targets Debian-based systems. The README now documents equivalent package-manager commands for Red Hat, Arch and openSUSE families; if you want the installer script extended to detect and support those families, I can update the installer script as well.
