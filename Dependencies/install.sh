@@ -3,7 +3,7 @@
 set -e
 
 # This Bash script will automatically install all the dependencies needed to run the Calculate Pi Scripts.
-# This was all written by Amonnium, and is only recommended for Debian-based systems because it uses APT, cURL and Snap.
+# This was all written by Amonnium, and it should only be used on Bash.
 # © 2026 Amonnium
 
 clear
@@ -16,12 +16,27 @@ sleep 2
 echo "Starting installation..."
 sleep 2
 
-# Check if the system is Debian-based
-if ! command -v apt >/dev/null 2>&1; then
-    echo
-    echo "This installer only supports Debian-based Linux distributions."
-    exit 1
-fi
+# Check what system is.
+source /etc/os-release
+
+case "$ID" in
+    ubuntu|debian|linuxmint|pop)
+        PKG_MANAGER="apt"
+        ;;
+    fedora|rhel|rocky|almalinux)
+        PKG_MANAGER="dnf"
+        ;;
+    arch|manjaro|endeavouros|cachyos)
+        PKG_MANAGER="pacman"
+        ;;
+    opensuse*|opensuse-leap|opensuse-tumbleweed)
+        PKG_MANAGER="zypper"
+        ;;
+    *)
+        echo "Unsupported Linux distribution."
+        exit 1
+        ;;
+esac
 
 # Updating packages
 echo
@@ -30,7 +45,41 @@ echo "Updating packages..."
 echo "----------------------------------------"
 sleep 0.5
 
-sudo apt update && sudo apt upgrade -y
+update_system() {
+    case "$PKG_MANAGER" in
+        apt)
+            sudo apt update && sudo apt upgrade -y
+            ;;
+        dnf)
+            sudo dnf upgrade -y
+            ;;
+        pacman)
+            sudo pacman -Syu --noconfirm
+            ;;
+        zypper)
+            sudo zypper refresh
+            sudo zypper update -y
+            ;;
+    esac
+}
+
+# Defining package manager settings.
+install_package() {
+    case "$PKG_MANAGER" in
+        apt)
+            sudo apt install -y "$@"
+            ;;
+        dnf)
+            sudo dnf install -y "$@"
+            ;;
+        pacman)
+            sudo pacman -S --noconfirm "$@"
+            ;;
+        zypper)
+            sudo zypper install -y "$@"
+            ;;
+    esac
+}
 
 # Git installation
 echo
@@ -42,7 +91,20 @@ sleep 0.5
 if command -v git >/dev/null 2>&1; then
     echo "Git is already installed."
 else
-    sudo apt install -y git
+    case "$PKG_MANAGER" in
+        apt)
+            install_package git
+            ;;
+        dnf)
+            install_package git
+            ;;
+        pacman)
+            install_package git
+            ;;
+        zypper)
+            install_package git
+            ;;
+    esac
 fi
 
 # Python installation
@@ -55,7 +117,25 @@ sleep 0.5
 if command -v python3 >/dev/null 2>&1; then
     echo "Python is already installed."
 else
-    sudo apt install -y python3 python-is-python3 python3-pip
+    case "$PKG_MANAGER" in
+
+    apt)
+        install_package python3 python-is-python3 python3-pip
+        ;;
+
+    dnf)
+        install_package python3 python3-pip
+        ;;
+
+    pacman)
+        install_package python python-pip
+        ;;
+
+    zypper)
+        install_package python3 python3-pip
+        ;;
+
+    esac
 fi
 
 # GCC and G++ installation
@@ -68,7 +148,25 @@ sleep 0.5
 if command -v gcc >/dev/null 2>&1 && command -v g++ >/dev/null 2>&1; then
     echo "GCC and G++ are already installed."
 else
-    sudo apt install -y build-essential
+    case "$PKG_MANAGER" in
+
+apt)
+    install_package build-essential
+    ;;
+
+dnf)
+    install_package gcc gcc-c++ make
+    ;;
+
+pacman)
+    install_package base-devel
+    ;;
+
+zypper)
+    install_package gcc gcc-c++ make
+    ;;
+
+    esac
 fi
 
 # Go installation
@@ -81,7 +179,20 @@ sleep 0.5
 if command -v go >/dev/null 2>&1; then
     echo "Go is already installed."
 else
-    sudo apt install -y golang-go
+    case "$PKG_MANAGER" in
+        apt)
+            install_package golang-go
+            ;;
+        dnf)
+            install_package golang
+            ;;
+        pacman)
+            install_package go
+            ;;
+        zypper)
+            install_package go
+            ;;
+    esac
 fi
 
 # Java installation
@@ -94,7 +205,20 @@ sleep 0.5
 if command -v java >/dev/null 2>&1; then
     echo "Java is already installed."
 else
-    sudo apt install -y default-jdk
+    case "$PKG_MANAGER" in
+        apt)
+            install_package default-jdk
+            ;;
+        dnf)
+            install_package java-latest-openjdk-devel
+            ;;
+        pacman)
+            install_package jdk-openjdk
+            ;;
+        zypper)
+            install_package java-21-openjdk-devel
+            ;;
+    esac
 fi
 
 # Julia installation
@@ -168,7 +292,20 @@ sleep 0.5
 if command -v lua >/dev/null 2>&1; then
     echo "Lua is already installed."
 else
-    sudo apt install -y lua5.4
+    case "$PKG_MANAGER" in
+        apt)
+            install_package lua5.4
+            ;;
+        dnf)
+            install_package lua
+            ;;
+        pacman)
+            install_package lua
+            ;;
+        zypper)
+            install_package lua
+            ;;
+    esac
 fi
 
 # Perl installation
@@ -181,7 +318,20 @@ sleep 0.5
 if command -v perl >/dev/null 2>&1; then
     echo "Perl is already installed."
 else
-    sudo apt install -y perl
+    case "$PKG_MANAGER" in
+        apt)
+            install_package perl
+            ;;
+        dnf)
+            install_package perl
+            ;;
+        pacman)
+            install_package perl
+            ;;
+        zypper)
+            install_package perl
+            ;;
+    esac
 fi
 
 # Ruby installation
@@ -194,7 +344,20 @@ sleep 0.5
 if command -v ruby >/dev/null 2>&1; then
     echo "Ruby is already installed."
 else
-    sudo apt install -y ruby-full
+    case "$PKG_MANAGER" in
+        apt)
+            install_package ruby-full
+            ;;
+        dnf)
+            install_package ruby
+            ;;
+        pacman)
+            install_package ruby
+            ;;
+        zypper)
+            install_package ruby
+            ;;
+    esac
 fi
 
 # Zig installation
@@ -207,7 +370,20 @@ sleep 0.5
 if command -v zig >/dev/null 2>&1; then
     echo "Zig is already installed."
 else
-    sudo snap install zig --classic --edge
+    case "$PKG_MANAGER" in
+        apt)
+            install_package zig
+            ;;
+        dnf)
+            install_package zig
+            ;;
+        pacman)
+            install_package zig
+            ;;
+        zypper)
+            install_package zig
+            ;;
+    esac
 fi
 
 # Raku installation
@@ -220,7 +396,20 @@ sleep 0.5
 if command -v raku >/dev/null 2>&1; then
     echo "Raku is already installed."
 else
-    sudo apt install -y rakudo
+    case "$PKG_MANAGER" in
+        apt)
+            install_package rakudo
+            ;;
+        dnf)
+            install_package rakudo
+            ;;
+        pacman)
+            install_package rakudo
+            ;;
+        zypper)
+            install_package raku
+            ;;
+    esac
 fi
 
 sleep 2
