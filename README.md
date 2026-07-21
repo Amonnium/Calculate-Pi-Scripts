@@ -5,15 +5,23 @@ So, you are in the right place! Welcome to the **Calculate Pi Scripts!**
 The **Calculate Pi Scripts** is a **GitHub repository** that holds many **code files**, **executables** (that includes **bytecode** also), that calculate the **Pi**. The majority of the languages present here, are good at calculating, because I've searched much and selected the **best languages** with the **best performance** in this matter (and others that aren't used very much for math, but they're **known**, and **I like it**, but if you think it should be **deleted** because it's ***nonsense*** using it, **I'll delete it**), and also the **best methods** to **calculate** (like **Chudnovsky**, **Monte Carlo**, **Leibniz**, **Nilakantha**, **Machin's Formula**, **Big Decimal**, **BBP**, or simply **Math.PI**).
 
 ## How to download?
-To install **everything** (only working on **Bash**) with an **all-in-one solution**, **copy** this **command** that downloads and executes an **install.sh** and you can check it in this repo:
+To install **everything** with an **all-in-one solution**, **copy** this **command** that downloads and executes an **install.sh** and you can check it in this repo:
 ```
 bash <(curl -fsSL https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/install.sh)
 ```
 To install separated files, go to the **Releases**, and download the files you want, based on your OS, because the **.EXEs** only work on **Windows™**, and the ones **without .exe extension** on **Unix-like** systems. **Please follow the instructions showed in the Releases and on Dependencies directory's README, for not get doubts and problems with dependencies and such things.**
 Also, if you want to **install** the dependencies on a **intelligent way** and you use a **Debian-based system**, you can use the **install.sh** script (included in the main installer, by the way) present in **Dependencies directory** using this **command**:
+
+- On Linux:
 ```
 bash <(curl -fsSL https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/Dependencies/install.sh)
 ```
+
+- On Windows:
+```
+irm https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/Dependencies/install.ps1 | iex
+```
+
 If you only want a **list of commands** to **download** them **independently** (also, only on a **Debian-based system**), there are on the **README** at the **same directory**.
 
 ## How to build?
