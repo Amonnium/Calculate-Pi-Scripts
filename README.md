@@ -1,5 +1,9 @@
 ![Calculate Pi Scripts Logo](Assets/Calculate-Pi-Scripts-Logo.png)
 # Calculate Pi Scripts
+
+The book library-like GitHub repository to find various scripts for calculating the constant π (Pi).
+
+----------------------------------------------
 Are you a **junior programmer** (or **senior**), a **data scientist**, or **something else**, that want to **test code** that isn't "Hello, World!", but want to **test** with **math** and **calculate** the famous constant **π (Pi)**? 
 So, you are in the right place! Welcome to the **Calculate Pi Scripts!**
 The **Calculate Pi Scripts** is a **GitHub repository** that holds many **code files**, **executables** (that includes **bytecode** also), that calculate the **Pi**. The majority of the languages present here, are good at calculating, because I've searched much and selected the **best languages** with the **best performance** in this matter (and others that aren't used very much for math, but they're **known**, and **I like it**, but if you think it should be **deleted** because it's ***nonsense*** using it, **I'll delete it**), and also the **best methods** to **calculate** (like **Chudnovsky**, **Monte Carlo**, **Leibniz**, **Nilakantha**, **Machin's Formula**, **Big Decimal**, **BBP**, or simply **Math.PI**).
