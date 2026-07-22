@@ -53,6 +53,7 @@ rm README.md
 rm LICENSE
 rm Pi.bat
 rm -r Pi_in_PowerShell
+rm -r Assets
 rm Dependencies/README.md
 rm Pi_in_C++_Folder/Pi_in_C++.exe
 rm Pi_in_C_Folder/Pi_in_C.exe
