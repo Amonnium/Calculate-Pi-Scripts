@@ -10,8 +10,15 @@ The **Calculate Pi Scripts** is a **GitHub repository** that holds many **code f
 
 ## How to download?
 To install **everything** with an **all-in-one solution**, **copy** this **command** that downloads and executes an **install.sh** and you can check it in this repo:
+
+- On Linux: 
 ```
 bash <(curl -fsSL https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/install.sh)
+```
+
+- On Windows:
+```
+irm https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/install.ps1 | iex
 ```
 To install separated files, go to the **Releases**, and download the files you want, based on your OS, because the **.EXEs** only work on **Windows™**, and the ones **without .exe extension** on **Unix-like** systems. **Please follow the instructions showed in the Releases and on Dependencies directory's README, for not get doubts and problems with dependencies and such things.**
 Also, if you want to **install** the dependencies on a **intelligent way** and you use a **Debian-based system**, you can use the **install.sh** script (included in the main installer, by the way) present in **Dependencies directory** using this **command**:
@@ -37,6 +44,8 @@ git clone https://github.com/Amonnium/Calculate-Pi-Scripts.git
 cd Calculate-Pi-Scripts
 rm -r Pi_in_PowerShell
 rm Pi.bat
+rm install.ps1
+rm Dependencies/install.ps1
 rm Pi_in_C++_Folder/Pi_in_C++.exe Pi_in_C_Folder/Pi_in_C.exe Pi_in_Go_Folder/Pi_in_Go.exe Pi_in_Go_Folder/Math_Pi_in_Go.exe Pi_in_Rust_Folder/Pi_in_Rust.exe Pi_in_Rust_Folder/Math_Pi_in_Rust.exe
 ```
 
