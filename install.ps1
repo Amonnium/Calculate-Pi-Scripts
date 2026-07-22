@@ -258,6 +258,7 @@ $FilesToRemove = @(
     "install.sh",
     "install.ps1",
     "Pi_in_PowerShell",
+    "Assets",
     "Dependencies\README.md",
     "Dependencies\install.sh",
     "Pi_in_C++_Folder\Pi_in_C++.exe",
