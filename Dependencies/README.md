@@ -1,6 +1,22 @@
 # Dependencies
 This README explains how to install the dependencies needed by the languages used in this repository.
 
+## Windows (PowerShell)
+If you are using Windows, the easiest way to set up the required tools is to use the provided PowerShell installer.
+
+Requirements:
+- PowerShell 7+ (recommended)
+- Administrator privileges
+
+Run the installer from the repository root:
+```
+powershell -ExecutionPolicy Bypass -File .\Dependencies\install.ps1
+```
+
+The script installs Git, Python, MSYS2 build tools, Go, Java, Julia, Kotlin, Rust, Node.js, Lua, Perl, Ruby, Zig, and Raku using winget where available. You may need to reopen your terminal after installation before using some of the newly installed tools.
+
+---
+
 ## Manual Installation
 The commands to install the software needed by the languages in this repo are shown per Linux distribution family below.
 
@@ -135,6 +151,13 @@ sudo zypper refresh && sudo zypper update -y && sudo zypper install -y git pytho
 
 ## Using Dependencies Installer
 If you don't want to copy/paste the commands every time, you can use the Dependencies Installer:
+
+Linux/macOS:
 ```
 bash <(curl -fsSL https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/Dependencies/install.sh)
+```
+
+Windows (PowerShell):
+```
+powershell -ExecutionPolicy Bypass -File .\Dependencies\install.ps1
 ```
