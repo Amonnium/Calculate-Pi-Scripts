@@ -13,12 +13,12 @@ To install **everything** with an **all-in-one solution**, **copy** this **comma
 
 - On Linux: 
 ```
-bash <(curl -fsSL https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/install.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/Installers/install.sh)
 ```
 
 - On Windows:
 ```
-irm https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/install.ps1 | iex
+irm https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/Installers/install.ps1 | iex
 ```
 To install separated files, go to the **Releases**, and download the files you want, based on your OS, because the **.EXEs** only work on **Windows™**, and the ones **without .exe extension** on **Unix-like** systems. **Please follow the instructions showed in the Releases and on Dependencies directory's README, for not get doubts and problems with dependencies and such things.**
 Also, if you want to **install** the dependencies on a **intelligent way** and you use a **Debian-based system**, you can use the **install.sh** script (included in the main installer, by the way) present in **Dependencies directory** using this **command**:
