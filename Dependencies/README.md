@@ -1,24 +1,11 @@
 # Dependencies
 This README explains how to install the dependencies needed by the languages used in this repository.
 
-## Windows (PowerShell)
-If you are using Windows, the easiest way to set up the required tools is to use the provided PowerShell installer.
-
-Requirements:
-- PowerShell 7+ (recommended)
-- Administrator privileges
-
-Run the installer from the repository root:
-```
-powershell -ExecutionPolicy Bypass -File .\Dependencies\install.ps1
-```
-
-The script installs Git, Python, MSYS2 build tools, Go, Java, Julia, Kotlin, Rust, Node.js, Lua, Perl, Ruby, Zig, and Raku using winget where available. You may need to reopen your terminal after installation before using some of the newly installed tools.
-
 ---
 
 ## Manual Installation
-The commands to install the software needed by the languages in this repo are shown per Linux distribution family below.
+Windows: You should search on Internet for the dependencies and download them. Some will use EXE or MSI installers, while others will use Winget or MSYS2.
+Linux: The commands to install the software needed by the languages in this repo are shown per Linux distribution family below.
 
 > Notes:
 > - Package names can vary between distribution versions — adjust as needed.
