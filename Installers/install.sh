@@ -54,7 +54,8 @@ rm LICENSE
 rm Pi.bat
 rm -r Pi_in_PowerShell
 rm -r Assets
-rm Dependencies/README.md
+rm -r Dependencies
+rm -r Installers
 rm Pi_in_C++_Folder/Pi_in_C++.exe
 rm Pi_in_C_Folder/Pi_in_C.exe
 rm Pi_in_Go_Folder/Math_Pi_in_Go.exe
