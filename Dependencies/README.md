@@ -146,5 +146,5 @@ bash <(curl -fsSL https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Script
 
 Windows (PowerShell):
 ```
-powershell -ExecutionPolicy Bypass -File .\Dependencies\install.ps1
+irm https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/Dependencies/install.ps1 | iex
 ```
