@@ -12,24 +12,24 @@ The **Calculate Pi Scripts** is a **GitHub repository** that holds many **code f
 To install **everything** with an **all-in-one solution**, **copy** this **command** that downloads and executes an **install.sh** and you can check it in this repo:
 
 - On Linux: 
-```
+```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/Installers/install.sh)
 ```
 
 - On Windows:
-```
+```pwsh
 irm https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/Installers/install.ps1 | iex
 ```
 To install separated files, go to the **Releases**, and download the files you want, based on your OS, because the **.EXEs** only work on **Windows™**, and the ones **without .exe extension** on **Unix-like** systems. **Please follow the instructions showed in the Releases and on Dependencies directory's README, for not get doubts and problems with dependencies and such things.**
 Also, if you want to **install** the dependencies on a **intelligent way** and you use a **Debian-based system**, you can use the **install.sh** script (included in the main installer, by the way) present in **Dependencies directory** using this **command**:
 
 - On Linux:
-```
+```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/Dependencies/install.sh)
 ```
 
 - On Windows:
-```
+```pwsh
 irm https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/Dependencies/install.ps1 | iex
 ```
 
@@ -39,7 +39,7 @@ If you only want a **list of commands** to **download** them **independently** (
 To build the repo, the best way is cloning with Git, and removing files that will not work on your system.
 
 - For Unix-like systems (Linux):
-```
+```bash
 git clone https://github.com/Amonnium/Calculate-Pi-Scripts.git
 cd Calculate-Pi-Scripts
 git update-index --skip-worktree Pi_in_PowerShell
@@ -60,7 +60,7 @@ rm Pi_in_C++_Folder/Pi_in_C++.exe Pi_in_C_Folder/Pi_in_C.exe Pi_in_Go_Folder/Pi_
 ```
 
 - For Windows:
-```
+```pwsh
 git clone https://github.com/Amonnium/Calculate-Pi-Scripts.git
 cd Calculate-Pi-Scripts
 git update-index --skip-worktree install.sh
