@@ -54,7 +54,7 @@ git update-index --skip-worktree Pi_in_Rust_Folder/Pi_in_Rust.exe
 git update-index --skip-worktree Pi_in_Rust_Folder/Math_Pi_in_Rust.exe
 rm -r Pi_in_PowerShell
 rm Pi.bat
-rm install.ps1
+rm Installers/install.ps1
 rm Dependencies/install.ps1
 rm Pi_in_C++_Folder/Pi_in_C++.exe Pi_in_C_Folder/Pi_in_C.exe Pi_in_Go_Folder/Pi_in_Go.exe Pi_in_Go_Folder/Math_Pi_in_Go.exe Pi_in_Rust_Folder/Pi_in_Rust.exe Pi_in_Rust_Folder/Math_Pi_in_Rust.exe
 ```
@@ -72,7 +72,7 @@ git update-index --skip-worktree Pi_in_Go_Folder/Pi_in_Go
 git update-index --skip-worktree Pi_in_Go_Folder/Math_Pi_in_Go
 git update-index --skip-worktree Pi_in_Rust_Folder/Pi_in_Rust
 git update-index --skip-worktree Pi_in_Rust_Folder/Math_Pi_in_Rust
-del install.sh
+del Installers/install.sh
 del Dependencies/install.sh
 del Pi.sh
 del Pi_in_C++_Folder/Pi_in_C++ Pi_in_C_Folder/Pi_in_C Pi_in_Go_Folder/Pi_in_Go Pi_in_Go_Folder/Math_Pi_in_Go Pi_in_Rust_Folder/Pi_in_Rust Pi_in_Rust_Folder/Math_Pi_in_Rust
