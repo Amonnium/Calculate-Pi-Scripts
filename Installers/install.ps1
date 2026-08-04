@@ -259,12 +259,12 @@ $FilesToRemove = @(
     "Pi_in_PowerShell",
     "Assets",
     "Dependencies",
-    "Pi_in_C++_Folder\Pi_in_C++.exe",
-    "Pi_in_C_Folder\Pi_in_C.exe",
-    "Pi_in_Go_Folder\Math_Pi_in_Go.exe",
-    "Pi_in_Go_Folder\Pi_in_Go.exe",
-    "Pi_in_Rust_Folder\Math_Pi_in_Rust.exe",
-    "Pi_in_Rust_Folder\Pi_in_Rust.exe"
+    "Pi_in_C++_Folder\Pi_in_C++",
+    "Pi_in_C_Folder\Pi_in_C",
+    "Pi_in_Go_Folder\Math_Pi_in_Go",
+    "Pi_in_Go_Folder\Pi_in_Go",
+    "Pi_in_Rust_Folder\Math_Pi_in_Rust",
+    "Pi_in_Rust_Folder\Pi_in_Rust"
 
 )
 
