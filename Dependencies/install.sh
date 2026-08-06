@@ -221,6 +221,47 @@ else
     esac
 fi
 
+# .NET installation
+echo
+echo "----------------------------------------"
+echo "Installing .NET..."
+echo "----------------------------------------"
+sleep 0.5
+
+if command -v dotnet >/dev/null 2>&1; then
+    echo ".NET is already installed."
+else
+    case "$PKG_MANAGER" in
+        apt)
+            install_package dotnet-sdk-10.0
+            ;;
+        dnf)
+            install_package dotnet-sdk-10.0
+            ;;
+        pacman)
+            install_package dotnet-sdk-10.0
+            ;;
+        zypper)
+            install_package dotnet-sdk
+           ;;
+    esac
+fi
+
+# Nim installation
+echo
+echo "----------------------------------------"
+echo "Installing Nim..."
+echo "----------------------------------------"
+sleep 0.5
+
+if command -v nim >/dev/null 2>&1; then
+    echo "Nim is already installed."
+else
+    curl https://nim-lang.org/choosenim/init.sh -sSf | sh
+
+    export PATH=$HOME/.nimble/bin:$PATH
+fi
+
 # Julia installation
 echo
 echo "----------------------------------------"
