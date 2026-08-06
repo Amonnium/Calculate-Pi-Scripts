@@ -49,6 +49,7 @@ echo "----------------------------------------"
 sleep 0.5
 
 rm -rf .git
+rm -rf .github
 rm README.md
 rm LICENSE
 rm Pi.bat
@@ -60,6 +61,8 @@ rm Pi_in_C++_Folder/Pi_in_C++.exe
 rm Pi_in_C_Folder/Pi_in_C.exe
 rm Pi_in_Go_Folder/Math_Pi_in_Go.exe
 rm Pi_in_Go_Folder/Pi_in_Go.exe
+rm Pi_in_Nim_Folder/Pi_in_Nim.exe
+rm Pi_in_Nim_Folder/Math_Pi_in_Nim.exe
 rm Pi_in_Rust_Folder/Pi_in_Rust.exe
 rm Pi_in_Rust_Folder/Math_Pi_in_Rust.exe
 
