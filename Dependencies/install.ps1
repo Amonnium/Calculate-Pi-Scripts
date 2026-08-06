@@ -139,15 +139,46 @@ if (-not (Command-Exists "winget")) {
 
 
 # --------------------------------------------------
+# Scoop installation
+# --------------------------------------------------
+
+Write-Section "Installing Scoop"
+
+if (Command-Exists "scoop") {
+
+    Write-Host "Scoop is already installed."
+
+}
+else {
+
+    Write-Host "Installing Scoop..."
+
+    Set-ExecutionPolicy Bypass -Scope Process -Force
+    iwr -useb get.scoop.sh | iex
+
+    Refresh-Environment
+}
+
+
+# --------------------------------------------------
 # Git installation
 # --------------------------------------------------
 
 Write-Section "Installing Git"
 
-Install-Winget `
-    -Name "Git" `
-    -Id "Git.Git" `
-    -Command "git"
+if (Command-Exists "git") {
+
+    Write-Host "Git is already installed."
+
+}
+else {
+
+    Install-Winget `
+        -Name "Git" `
+        -Id "Git.Git" `
+        -Command "git"
+
+}
 
 
 # --------------------------------------------------
@@ -156,10 +187,19 @@ Install-Winget `
 
 Write-Section "Installing Python"
 
-Install-Winget `
-    -Name "Python" `
-    -Id "Python.Python.3" `
-    -Command "python"
+if (Command-Exists "python") {
+
+    Write-Host "Python is already installed."
+
+}
+else {
+
+    Install-Winget `
+        -Name "Python" `
+        -Id "Python.Python.3" `
+        -Command "python"
+
+}
 
 
 # --------------------------------------------------
@@ -249,6 +289,48 @@ else {
         -Id "Microsoft.OpenJDK.21" `
         -Command "java"
 
+}
+
+
+# --------------------------------------------------
+# .NET installation
+# --------------------------------------------------
+
+Write-Section "Installing .NET SDK"
+
+if (Command-Exists "dotnet") {
+
+    Write-Host ".NET is already installed."
+
+}
+else {
+
+    Install-Winget `
+        -Name ".NET SDK" `
+        -Id "Microsoft.DotNet.SDK.10" `
+        -Command "dotnet"
+
+}
+
+
+# --------------------------------------------------
+# Nim installation
+# --------------------------------------------------
+
+Write-Section "Installing Nim"
+
+if (Command-Exists "nim") {
+
+    Write-Host "Nim is already installed."
+
+}
+else {
+
+    Write-Host "Installing Nim..."
+
+    scoop install nim
+
+    Refresh-Environment
 }
 
 
