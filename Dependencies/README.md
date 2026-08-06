@@ -15,15 +15,15 @@ Linux: The commands to install the software needed by the languages in this repo
 
 ## Debian / Ubuntu / other Debian-based
 Update packages:
-```
+```bash
 sudo apt update && sudo apt upgrade -y
 ```
 Install packages:
-```
+```bash
 sudo apt install -y git python3 python-is-python3 python3-pip build-essential golang-go default-jdk lua5.4 perl ruby-full rakudo
 ```
 (Optional) Node.js using nvm (recommended):
-```
+```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 source ~/.bashrc
 nvm install --lts
@@ -33,23 +33,23 @@ nvm install --lts
 
 ## RHEL / CentOS / Fedora (dnf or yum)
 Update packages (Fedora and modern RHEL/CentOS use dnf; older CentOS may use yum):
-```
+```bash
 sudo dnf update -y
 # or
 sudo yum update -y
 ```
 Install packages (using dnf; replace with yum on older systems):
-```
+```bash
 sudo dnf install -y git python3 python3-pip gcc gcc-c++ make golang java-17-openjdk-devel lua perl ruby rakudo
 ```
 Install development tools group (provides build tools):
-```
+```bash
 sudo dnf groupinstall -y "Development Tools"
 # or with yum
 sudo yum groupinstall -y "Development Tools"
 ```
 Node.js (package) or nvm:
-```
+```bash
 sudo dnf install -y nodejs npm
 # or use nvm (cross-distro) - see Cross-distro installers
 ```
@@ -58,7 +58,7 @@ sudo dnf install -y nodejs npm
 
 ## Arch Linux / Manjaro (pacman)
 Update and install packages:
-```
+```bash
 sudo pacman -Syu
 sudo pacman -S --noconfirm git python python-pip base-devel go jdk-openjdk lua perl ruby rakudo nodejs npm julia zig
 ```
@@ -70,15 +70,15 @@ Notes:
 
 ## openSUSE (Leap / Tumbleweed) - zypper
 Refresh and update:
-```
+```bash
 sudo zypper refresh && sudo zypper update -y
 ```
 Install packages:
-```
+```bash
 sudo zypper install -y git python3 python3-pip gcc gcc-c++ make golang java-17-openjdk-devel lua perl ruby rakudo nodejs npm julia
 ```
 Install development pattern (optional):
-```
+```bash
 sudo zypper install -t pattern devel_basis
 ```
 
@@ -88,50 +88,62 @@ sudo zypper install -t pattern devel_basis
 Some projects provide their own install scripts or language-specific version managers that work across distros.
 
 Julia (official script):
-```
+```bash
 curl -fsSL https://install.julialang.org | sh
 ```
 Kotlin (via SDKMAN):
-```
+```bash
 curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 sdk install kotlin
 ```
 Rust (rustup):
-```
+```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
+
 Node.js (nvm):
-```
+
+```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 source ~/.bashrc
 nvm install --lts
 ```
-Zig (snap or download releases):
-- If snap is available:
+
+Nim (choosenim via curl):
+
+```bash
+curl -sSL https://nim-lang.org/choosenim/init.sh | sh
 ```
+
+Zig (snap or download releases):
+
+- If snap is available:
+
+```bash
 sudo snap install zig --classic --edge
 ```
+
 - Or download prebuilt binaries from the Zig releases page: https://ziglang.org/download/
 
 ---
 
 ## Quick reference (one-liners per family)
 Debian/Ubuntu:
-```
-sudo apt update && sudo apt upgrade -y && sudo apt install -y git python3 python-is-python3 python3-pip build-essential golang-go default-jdk lua5.4 perl ruby-full rakudo
+```bash
+sudo apt update && sudo apt upgrade -y && sudo apt install -y git python3 python-is-python3 python3-pip build-essential golang-go default-jdk lua5.4 perl ruby-full rakudo dotnet-sdk-10.0
 ```
 RHEL/Fedora:
-```
-sudo dnf update -y && sudo dnf install -y git python3 python3-pip gcc gcc-c++ make golang java-17-openjdk-devel lua perl ruby rakudo
+```bash
+sudo dnf update -y && sudo dnf install -y git python3 python3-pip gcc gcc-c++ make golang java-17-openjdk-devel lua perl ruby rakudo dotnet-sdk-10.0
 ```
 Arch:
-```
-sudo pacman -Syu && sudo pacman -S --noconfirm git python python-pip base-devel go jdk-openjdk lua perl ruby rakudo
+```bash
+sudo pacman -Syu && sudo pacman -S --noconfirm git python python-pip base-devel go jdk-openjdk lua perl ruby rakudo dotnet-sdk
 ```
 openSUSE:
-```
-sudo zypper refresh && sudo zypper update -y && sudo zypper install -y git python3 python3-pip gcc gcc-c++ make golang java-17-openjdk-devel lua perl ruby rakudo
+```bash
+sudo zypper refresh && sudo zypper update -y && sudo zypper install -y git python3 python3-pip gcc gcc-c++ make golang java-17-openjdk-devel lua perl ruby rakudo dotnet-sdk-10.0
 ```
 
 ---
@@ -140,11 +152,12 @@ sudo zypper refresh && sudo zypper update -y && sudo zypper install -y git pytho
 If you don't want to copy/paste the commands every time, you can use the Dependencies Installer:
 
 Linux/macOS:
-```
+```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/Dependencies/install.sh)
 ```
 
 Windows (PowerShell):
-```
+```powershell
 irm https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/Dependencies/install.ps1 | iex
 ```
+
