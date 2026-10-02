@@ -72,7 +72,7 @@ function Write-Section {
 }
 
 
-function Command-Exists {
+function Test-Command {
 
     param(
         [string]$Command
@@ -83,7 +83,7 @@ function Command-Exists {
 }
 
 
-function Refresh-Environment {
+function Update-Environment {
 
     $machinePath = [System.Environment]::GetEnvironmentVariable(
         "Path",
@@ -117,7 +117,7 @@ function Install-Git {
         --accept-package-agreements `
         --accept-source-agreements
 
-    Refresh-Environment
+    Update-Environment
 
 }
 
