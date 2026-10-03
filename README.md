@@ -75,10 +75,19 @@ The CLI provides a guided interface for selecting an implementation, obtaining t
 
 ### Installing the CLI
 
-The recommended way to install the CLI is through the platform-specific installer:
+The recommended way to install the CLI is through the platform-specific installer, with these commands:
 
-- **Windows:** `Installers/install.ps1`
-- **Linux:** `Installers/install.sh`
+- **Windows:**
+
+    ```pwsh
+    irm https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/Installers/install.ps1 | iex
+    ```
+
+- **Linux:**
+
+    ```bash
+    bash <(curl -fsSL https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/Installers/install.sh)
+    ```
 
 These installers install the CLI itself. They do not install every programming language or toolchain used by the repository.
 
@@ -133,11 +142,11 @@ If you want to work on Calculate Pi Scripts itself, clone the repository and wor
 
 The CLI source code is located in:
 
-    CLI/
+``CLI/``
 
 The installer scripts are located in:
 
-    Installers/
+``Installers/``
 
 The Pi implementations remain in their respective directories throughout the repository.
 
