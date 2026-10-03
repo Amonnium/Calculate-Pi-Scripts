@@ -1,98 +1,190 @@
-![Calculate Pi Scripts Logo](Assets/Calculate-Pi-Scripts-Logo.png)
 # Calculate Pi Scripts
 
-The book library-like GitHub repository to find various scripts for calculating the constant π (Pi).
+![Calculate Pi Scripts Logo](Assets/Calculate-Pi-Scripts-Logo.png)
+
+Calculate Pi Scripts is a multi-language collection of programs that calculate or approximate pi.
+
+It is made for beginners and experienced developers who want to learn, compare different approaches, experiment with code, or simply have fun calculating pi.
+
+The repository contains source code, available precompiled binaries and bytecode, and beginner-friendly documentation.
+
+## Beginner guides
+
+- [Getting started](docs/getting-started.md)
+- [Languages and commands](docs/languages.md)
+- [Algorithms](docs/algorithms.md)
+- [Toolchains](docs/toolchains.md)
+- [Troubleshooting and FAQ](docs/troubleshooting.md)
+
+For a broader overview of the documentation, see the [documentation index](docs/README.md).
 
 ---
-Are you a **junior programmer** (or **senior**), a **data scientist**, or **something else**, that want to **test code** that isn't "Hello, World!", but want to **test** with **math** and **calculate** the famous constant **π (Pi)**? 
-So, you are in the right place! Welcome to the **Calculate Pi Scripts!**
-The **Calculate Pi Scripts** is a **GitHub repository** that holds many **code files**, **executables** (that includes **bytecode** also), that calculate the **Pi**. The majority of the languages present here, are good at calculating, because I've searched much and selected the **best languages** with the **best performance** in this matter (and others that aren't used very much for math, but they're **known**, and **I like it**, but if you think it should be **deleted** because it's **_nonsense_** using it, **I'll delete it**), and also the **best methods** to **calculate** (like **Chudnovsky**, **Monte Carlo**, **Leibniz**, **Nilakantha**, **Machin's Formula**, **Big Decimal**, **BBP**, or simply **Math.PI**).
 
-## How to download?
-To install **everything** with an **all-in-one solution**, **copy** this **command** that downloads and executes an **install.sh** and you can check it in this repo:
+## The collection
 
-- On Linux: 
-```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/Installers/install.sh)
-```
+The complete Calculate Pi Scripts collection is the collection of implementations throughout this repository.
 
-- On Windows:
-```pwsh
-irm https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/Installers/install.ps1 | iex
-```
-To install separated files, go to the **Releases**, and download the files you want, based on your OS, because the **.EXEs** only work on **Windows™**, and the ones **without .exe extension** on **Unix-like** systems. **Please follow the instructions showed in the Releases and on Dependencies directory's README, for not get doubts and problems with dependencies and such things.**
-Also, if you want to **install** the dependencies on a **intelligent way** and you use a **Debian-based system**, you can use the **install.sh** script (included in the main installer, by the way) present in **Dependencies directory** using this **command**:
+It includes implementations in:
 
-- On Linux:
-```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/Dependencies/install.sh)
-```
+- Python
+- C
+- C++
+- Rust
+- Go
+- Java
+- Julia
+- JavaScript
+- Kotlin
+- Nim
+- PowerShell
+- C#
+- Lua
+- Perl
+- Raku
+- Ruby
+- Zig
+- Windows Batch
 
-- On Windows:
-```pwsh
-irm https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/Dependencies/install.ps1 | iex
-```
+The implementations use different languages, techniques, algorithms and, where appropriate, standard-library constants.
 
-If you only want a **list of commands** to **download** them **independently** (also, only on a **Debian-based system**), there are on the **README** at the **same directory**.
+The purpose of the collection is not to provide only one "best" way to calculate pi. Instead, it provides different implementations that can be read, compared, executed and experimented with.
 
-## How to build?
-To build the repo, the best way is cloning with Git, and removing files that will not work on your system.
+If you want to learn how one of the implementations works or how to run it manually, start with the [language guide](docs/languages.md).
 
-- For Unix-like systems (Linux):
-```bash
-git clone https://github.com/Amonnium/Calculate-Pi-Scripts.git
-cd Calculate-Pi-Scripts
-git update-index --skip-worktree Pi_in_PowerShell
-git update-index --skip-worktree Pi.bat
-git update-index --skip-worktree install.ps1
-git update-index --skip-worktree Dependencies/install.ps1
-git update-index --skip-worktree Pi_in_C++_Folder/Pi_in_C++.exe
-git update-index --skip-worktree Pi_in_C_Folder/Pi_in_C.exe
-git update-index --skip-worktree Pi_in_Go_Folder/Pi_in_Go.exe
-git update-index --skip-worktree Pi_in_Go_Folder/Math_Pi_in_Go.exe
-git update-index --skip-worktree Pi_in_Rust_Folder/Pi_in_Rust.exe
-git update-index --skip-worktree Pi_in_Rust_Folder/Math_Pi_in_Rust.exe
-rm -r Pi_in_PowerShell
-rm Pi.bat
-rm Installers/install.ps1
-rm Dependencies/install.ps1
-rm Pi_in_C++_Folder/Pi_in_C++.exe Pi_in_C_Folder/Pi_in_C.exe Pi_in_Go_Folder/Pi_in_Go.exe Pi_in_Go_Folder/Math_Pi_in_Go.exe Pi_in_Rust_Folder/Pi_in_Rust.exe Pi_in_Rust_Folder/Math_Pi_in_Rust.exe
-```
+---
 
-- For Windows:
-```pwsh
-git clone https://github.com/Amonnium/Calculate-Pi-Scripts.git
-cd Calculate-Pi-Scripts
-git update-index --skip-worktree install.sh
-git update-index --skip-worktree Dependencies/install.sh
-git update-index --skip-worktree Pi.sh
-git update-index --skip-worktree Pi_in_C++_Folder/Pi_in_C++
-git update-index --skip-worktree Pi_in_C_Folder/Pi_in_C
-git update-index --skip-worktree Pi_in_Go_Folder/Pi_in_Go
-git update-index --skip-worktree Pi_in_Go_Folder/Math_Pi_in_Go
-git update-index --skip-worktree Pi_in_Rust_Folder/Pi_in_Rust
-git update-index --skip-worktree Pi_in_Rust_Folder/Math_Pi_in_Rust
-del Installers/install.sh
-del Dependencies/install.sh
-del Pi.sh
-del Pi_in_C++_Folder/Pi_in_C++ Pi_in_C_Folder/Pi_in_C Pi_in_Go_Folder/Pi_in_Go Pi_in_Go_Folder/Math_Pi_in_Go Pi_in_Rust_Folder/Pi_in_Rust Pi_in_Rust_Folder/Math_Pi_in_Rust
-```
+## The CLI
 
-## How to contribute?
-You can **contribute** to the **repository**, **issuing ideas**, like a **new language** and it's **best methods** and **the code**, or for **change a file**, or **delete it**.
-Also, you can **contribute** with **redistributing** and **forking** the **repository**.
-In the future, you'll have the possibility to **donate** and help with this **hobby projects**, because this is made with **dedication**.
-If you don't want to spend money, get to know that when you download, you are also **contributing**.
+Calculate Pi Scripts also provides an optional terminal user interface (TUI) for users who want a more guided way to run selected implementations.
+
+The CLI currently supports:
+
+- Python
+- C
+- C++
+- Rust
+- Go
+- Java
+- Julia
+
+The CLI intentionally does not cover every language in the repository.
+
+The complete collection remains available independently through the source code, scripts, binaries and documentation.
+
+The CLI provides a guided interface for selecting an implementation, obtaining the required artifact, checking required runtimes and running the selected program.
+
+### Installing the CLI
+
+The recommended way to install the CLI is through the platform-specific installer, with these commands:
+
+- **Windows:**
+
+    ```pwsh
+    irm https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/Installers/install.ps1 | iex
+    ```
+
+- **Linux:**
+
+    ```bash
+    bash <(curl -fsSL https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/Installers/install.sh)
+    ```
+
+These installers install the CLI itself. They do not install every programming language or toolchain used by the repository.
+
+Required runtimes are handled when they are actually needed by the CLI.
+
+> The installer scripts are intended for installing the released CLI. You do not need to clone the entire repository just to use the CLI.
+
+### Using the CLI
+
+After installation, launch the Calculate Pi Scripts CLI using its installed command.
+
+The CLI provides:
+
+- **Calculate Pi** — choose one of the supported implementations and run it.
+- **Manage Toolchains** — manage runtimes required by supported implementations.
+- **Help** — view keyboard controls and usage information.
+- **Exit** — close the application.
+
+For development or for running the complete collection manually, use the source code and the [language guide](docs/languages.md) instead.
+
+---
+
+## Running and compiling implementations manually
+
+The CLI is optional.
+
+Every implementation remains available independently, so you can inspect its source code, install its required tools and run or compile it yourself.
+
+The [Getting started](docs/getting-started.md) guide explains the basic workflow.
+
+The [Languages and commands](docs/languages.md) guide contains language-specific instructions.
+
+The [Toolchains](docs/toolchains.md) guide explains how to obtain the software required by implementations that need a compiler or runtime.
+
+If something goes wrong, check the [Troubleshooting and FAQ](docs/troubleshooting.md) guide.
+
+---
+
+## Algorithms
+
+Different implementations in this repository may use different approaches to calculate or approximate pi.
+
+The [Algorithms](docs/algorithms.md) documentation explains the relevant methods and provides additional context for understanding the implementations.
+
+The goal is not only to run the programs, but also to make it possible to understand what they are doing.
+
+---
+
+## Development
+
+If you want to work on Calculate Pi Scripts itself, clone the repository and work with the source code directly.
+
+The CLI source code is located in:
+
+``CLI/``
+
+The installer scripts are located in:
+
+``Installers/``
+
+The Pi implementations remain in their respective directories throughout the repository.
+
+When developing or modifying an implementation, consult the relevant documentation before changing its build or execution process.
+
+The CLI and the individual Pi implementations are separate parts of the project: changing one does not mean that every implementation needs to use the CLI.
+
+---
+
+## Contribute
+
+Suggestions, new implementations, corrections, documentation improvements, and other contributions are welcome.
+
+If you add a new implementation, try to provide:
+
+- readable source code;
+- appropriate documentation;
+- instructions for running or compiling it;
+- a binary or other artifact where appropriate.
+
+The CLI does not need to support every new implementation.
+
+See the [MIT License](LICENSE) for the terms covering this repository.
+
+---
 
 ## Copyright and Ownership of the files
-Many of you that analyzed the **code** and searched like me, are thinking "This guy is only **stealing** the **code** from **other programmers!**", and I want to say that **I CONDEMN STEALING**, and when I can, **I give the credits** to the **original creators** and give the **guarantee** of **taking down the specific files** from here, if any of the developers that created the code, contacts me. Not all the project is taken down, but the specific files that are **"copyrighted"**.
-If you still don't know what's this, it's a **book library-like repository** that shows you **scripts** to calculate the **Pi**, and gives you the **freedom** to **download** and **test** it, **suggest changes** and **redistribute** with your changes.
-**You can do** the things **you want**, but under the terms of the **MIT License**.
+
+This repository contains implementations from multiple sources.
+
+Attribution is included where known; if you are an author with a concern about a specific file, contact the project maintainer to discuss attribution or removal.
+
+The repository is distributed under the [MIT License](LICENSE).
 
 ### Actual Copyright ©
-**Windows** is a trademark from **Microsoft Corporation**. 
+
+**Windows** is a trademark from **Microsoft Corporation**.
 
 ---
-Thank you for visiting this repository.
 
-**The creator, Amonnium.**
+Thank you for visiting Calculate Pi Scripts.

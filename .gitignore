@@ -1,3 +1,4 @@
 .vscode
 nim.cfg
 config.nims
+CLI/dist
