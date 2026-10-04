@@ -90,6 +90,7 @@ The recommended way to install the CLI is through the platform-specific installe
 
     ```bash
     bash <(curl -fsSL https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/Installers/install.sh)
+    source ~/.bashrc
     ```
 
 These installers install the CLI itself. They do not install every programming language or toolchain used by the repository.
