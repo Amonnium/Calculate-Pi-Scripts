@@ -2,7 +2,7 @@ package catalog
 
 import "github.com/Amonnium/Calculate-Pi-Scripts/cli/internal/platform"
 
-const RepositoryRevision = "5f6133455011b19077611c890566ff1e17815870"
+const RepositoryRevision = "3f65236682afbc8d490f7cc65924e99bbd132435"
 
 const repositoryRawURL = "https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/" + RepositoryRevision + "/"
 
