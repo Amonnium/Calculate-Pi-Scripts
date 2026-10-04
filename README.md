@@ -36,6 +36,7 @@ It includes implementations in:
 - JavaScript
 - Kotlin
 - Nim
+- Bash
 - PowerShell
 - C#
 - Lua
@@ -54,6 +55,8 @@ If you want to learn how one of the implementations works or how to run it manua
 ---
 
 ## The CLI
+
+![Calculate Pi Scripts CLI](Assets/cli-preview.png)
 
 Calculate Pi Scripts also provides an optional terminal user interface (TUI) for users who want a more guided way to run selected implementations.
 
