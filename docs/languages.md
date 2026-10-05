@@ -11,7 +11,7 @@ Run commands from the repository root unless stated otherwise. Install the requi
 | C++ | `Pi_in_C++_Folder/Pi.cpp` | Leibniz series | Use the supplied Windows binary or compile; see below |
 | Rust | `Pi_in_Rust_Folder/Pi.rs`, `Math_Pi.rs` | Leibniz series and standard-library constant | Use the supplied Windows binary or compile; see below |
 | Go | `Pi_in_Go_Folder/Pi.go`, `Math_Pi.go` | Leibniz series and standard-library constant | `go run Pi_in_Go_Folder/Pi.go` |
-| Java | `Pi_in_Java/Pi.java`, `Math_Pi.java` | Machin's formula with `BigDecimal` and `Math.PI` | `java -cp Pi_in_Java Pi` |
+| Java | `Pi_in_Java/Pi.java`, `Math_Pi.java` | Machin's formula with `BigDecimal` and `Math.PI` | `java Pi`, `java Math_Pi` |
 | Julia | `Pi_in_Julia/Pi.jl`, `Math_Pi.jl` | Chudnovsky with binary splitting and `pi` | `julia Pi_in_Julia/Pi.jl` |
 
 The Java command runs the checked-in `Pi.class`, which requires Java 21 or later. To compile from source without replacing the provided class file, use a separate output directory.

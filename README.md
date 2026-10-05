@@ -86,11 +86,18 @@ The recommended way to install the CLI is through the platform-specific installe
     irm https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/Installers/install.ps1 | iex
     ```
 
-- **Linux:**
+- **Linux (Debian and Ubuntu-based):**
 
     ```bash
     bash <(curl -fsSL https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/Installers/install.sh)
     source ~/.bashrc
+    ```
+
+- **Unsupported systems (needs Docker installed, and it comes with everything installed):**
+
+    ```bash
+    docker pull amonnium/calculate-pi-cli
+    docker compose run --rm amonnium/calculate-pi-cli
     ```
 
 These installers install the CLI itself. They do not install every programming language or toolchain used by the repository.

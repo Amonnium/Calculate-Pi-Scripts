@@ -1,0 +1,7 @@
+services:
+  calculate-pi-cli:
+    build:
+      context: .
+    image: calculate-pi-cli
+    stdin_open: true
+    tty: true
