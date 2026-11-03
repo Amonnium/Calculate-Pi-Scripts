@@ -38,21 +38,21 @@ function Write-Success {
     Write-Host $Message -ForegroundColor Green
 }
 
-function Fail-Installer {
+function Stop-Installer {
     param([Parameter(Mandatory = $true)][string]$Message)
     throw $Message
 }
 
 function Test-WindowsX64 {
     if (-not [Environment]::Is64BitOperatingSystem) {
-        Fail-Installer 'This release supports Windows x64 only. A 32-bit Windows installation was detected.'
+        Stop-Installer 'This release supports Windows x64 only. A 32-bit Windows installation was detected.'
     }
 
     $architecture = $env:PROCESSOR_ARCHITECTURE
     $architectureWow = $env:PROCESSOR_ARCHITEW6432
 
     if ($architecture -eq 'ARM64' -or $architectureWow -eq 'ARM64') {
-        Fail-Installer 'This release provides a Windows x64 executable, but Windows ARM64 was detected. No ARM64 CLI asset is available in this release.'
+        Stop-Installer 'This release provides a Windows x64 executable, but Windows ARM64 was detected. No ARM64 CLI asset is available in this release.'
     }
 }
 
@@ -156,11 +156,11 @@ try {
 
     Write-Stage 1 'Checking system...'
     if ($env:OS -ne 'Windows_NT') {
-        Fail-Installer 'This installer supports Windows only.'
+        Stop-Installer 'This installer supports Windows only.'
     }
 
     if ([string]::IsNullOrWhiteSpace($env:LOCALAPPDATA)) {
-        Fail-Installer 'LOCALAPPDATA is not available. A user-level Windows installation cannot continue safely.'
+        Stop-Installer 'LOCALAPPDATA is not available. A user-level Windows installation cannot continue safely.'
     }
 
     Test-WindowsX64
@@ -170,7 +170,7 @@ try {
     New-Item -ItemType Directory -Path $InstallDirectory -Force | Out-Null
 
     if (Test-Path -LiteralPath $InstallPath -PathType Container) {
-        Fail-Installer "The install target '$InstallPath' is a directory. It was left unchanged."
+        Stop-Installer "The install target '$InstallPath' is a directory. It was left unchanged."
     }
 
     Write-Host ("Install location: {0}" -f $InstallPath)
@@ -187,21 +187,21 @@ try {
     Invoke-WebRequest -Uri $AssetUrl -OutFile $DownloadPath -UseBasicParsing
 
     if (-not (Test-Path -LiteralPath $DownloadPath -PathType Leaf)) {
-        Fail-Installer 'The download did not produce a file.'
+        Stop-Installer 'The download did not produce a file.'
     }
 
     $downloadInfo = Get-Item -LiteralPath $DownloadPath
     if ($downloadInfo.Length -ne $AssetSize) {
-        Fail-Installer ("The downloaded file has an unexpected size ({0} bytes); expected {1}." -f $downloadInfo.Length, $AssetSize)
+        Stop-Installer ("The downloaded file has an unexpected size ({0} bytes); expected {1}." -f $downloadInfo.Length, $AssetSize)
     }
 
     $downloadHash = Get-Sha256 -Path $DownloadPath
     if ($downloadHash -ne $AssetSha256) {
-        Fail-Installer 'The downloaded file failed SHA-256 verification. It will not be installed.'
+        Stop-Installer 'The downloaded file failed SHA-256 verification. It will not be installed.'
     }
 
     if (-not (Test-PeX64 -Path $DownloadPath)) {
-        Fail-Installer 'The downloaded release is not a valid Windows x64 executable. It will not be installed.'
+        Stop-Installer 'The downloaded release is not a valid Windows x64 executable. It will not be installed.'
     }
 
     Write-Stage 4 'Installing CLI...'
@@ -214,7 +214,7 @@ try {
 
     $stageHash = Get-Sha256 -Path $StagePath
     if ($stageHash -ne $AssetSha256) {
-        Fail-Installer 'The staged executable failed SHA-256 verification. The previous installation was left unchanged.'
+        Stop-Installer 'The staged executable failed SHA-256 verification. The previous installation was left unchanged.'
     }
 
     if (Test-Path -LiteralPath $BackupPath) {
@@ -257,16 +257,16 @@ try {
     Write-Stage 6 'Verifying installation...'
 
     if (-not (Test-Path -LiteralPath $InstallPath -PathType Leaf)) {
-        Fail-Installer 'The installed CLI executable is missing.'
+        Stop-Installer 'The installed CLI executable is missing.'
     }
 
     $installedHash = Get-Sha256 -Path $InstallPath
     if ($installedHash -ne $AssetSha256) {
-        Fail-Installer 'The installed CLI failed SHA-256 verification.'
+        Stop-Installer 'The installed CLI failed SHA-256 verification.'
     }
 
     if (-not (Test-PeX64 -Path $InstallPath)) {
-        Fail-Installer 'The installed CLI failed its Windows x64 executable check.'
+        Stop-Installer 'The installed CLI failed its Windows x64 executable check.'
     }
 
     # Do not launch the TUI automatically. The CLI is interactive and the

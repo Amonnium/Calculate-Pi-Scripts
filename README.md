@@ -83,13 +83,13 @@ The recommended way to install the CLI is through the platform-specific installe
 - **Windows:**
 
     ```pwsh
-    irm https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/Installers/install.ps1 | iex
+    irm https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/CLI/Installers/install.ps1 | iex
     ```
 
 - **Linux (Debian and Ubuntu-based):**
 
     ```bash
-    bash <(curl -fsSL https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/Installers/install.sh)
+    bash <(curl -fsSL https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/CLI/Installers/install.sh)
     source ~/.bashrc
     ```
 
@@ -105,6 +105,22 @@ These installers install the CLI itself. They do not install every programming l
 Required runtimes are handled when they are actually needed by the CLI.
 
 > The installer scripts are intended for installing the released CLI. You do not need to clone the entire repository just to use the CLI.
+
+### Uninstalling the CLI
+
+On Windows, run the uninstaller with PowerShell:
+
+```pwsh
+irm https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/CLI/Uninstallers/uninstall.ps1 | iex
+```
+
+On Linux, run the uninstaller with Bash:
+
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/Amonnium/Calculate-Pi-Scripts/refs/heads/readme.md/CLI/Uninstallers/uninstall.sh)
+```
+
+These uninstallers stop if the CLI executable is not installed. They remove the executable and the installer-managed PATH entry.
 
 ### Using the CLI
 
